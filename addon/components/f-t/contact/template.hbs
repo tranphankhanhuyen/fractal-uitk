@@ -1,0 +1,13 @@
+<View::Container>
+  <div class="contact-container-inner" data-anchor={{anchor}}>
+    <h2>Contact Fractal to learn more</h2>
+    <BsForm @model={{contactForm}} @onSubmit={{action "submit"}} as |Form|>
+      <Form.element @controlType="text" @label="Name" @placeholder="Name" @property="contactName" />
+      <Form.element @controlType="email" @label="Email" @placeholder="Email" @property="email" />
+      <Form.element @label="Affiliation" @placeholder="Affiliation" @property="affiliation" />
+      <Form.element @controlType="textarea" @rows="7" @label="Message" @placeholder="Message" @property="message" />
+      <GRecaptcha @size="normal" @sitekey="6LdYjrAUAAAAAGmh9UIGK9ebvZclQSjp8iJpFGoF" @onSuccess={{action "onCaptchaResolved"}} />
+      <BsButton @defaultText="Submit" @type="primary" @buttonType="button" />
+    </BsForm>
+  </div>
+</View::Container>

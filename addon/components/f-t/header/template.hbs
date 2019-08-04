@@ -1,0 +1,53 @@
+<div class="logo">
+  <img src="/images/fractaltx-logo.png" alt="Fractaltx">
+
+  <BsButton @type="dark" class="menu-icon" onclick={{action "onMenuToggle"}}>
+    <img src="/images/icons/menu-light.svg" alt="menu">
+  </BsButton>
+</div>
+
+<ul class="menu-list" data-show={{menuCollapsed}}>
+  {{#each menus as |menu|}}
+    <li 
+      class="menu-item"
+      data-active={{menu.active}}
+      onmouseover={{action "onMenuItemMouseOver" menu}}
+      onmouseout={{action "onMenuItemMouseLeave" menu}}
+    >
+      {{#if menu.route}}
+        {{#if menu.param}}
+          <LinkTo @route={{menu.route}} @model={{menu.param}}>{{menu.name}}</LinkTo>
+        {{else}}
+          <LinkTo @route={{menu.route}}>{{menu.name}}</LinkTo>
+        {{/if}}
+      {{else}}
+        <a class="menu-item menu-item-dropdown dropdown-toggle" data-active={{menu.active}}>{{menu.name}}</a>
+      {{/if}}
+
+      {{#if menu.menus}}
+        <ul class="sub-menu-list" data-active={{menu.active}}>
+          {{#each menu.menus as |subMenu|}}
+            <li class="sub-menu-item">
+              {{#if subMenu.param}}
+                <ScrollLinkTo
+                  @path={{subMenu.path}}
+                  @route={{subMenu.route}}
+                  @param={{subMenu.param}}
+                >
+                  {{subMenu.name}}
+                </ScrollLinkTo>
+              {{else}}
+                <ScrollLinkTo
+                  @path={{subMenu.path}}
+                  @route={{subMenu.route}}
+                >
+                  {{subMenu.name}}
+                </ScrollLinkTo>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>

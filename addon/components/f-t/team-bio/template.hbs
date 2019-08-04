@@ -1,0 +1,7 @@
+<img class="team-bio-image" src={{@image}} alt={{@name}} >
+<div class="team-bio-name">{{@name}}</div>
+<div class="team-bio-title">{{@title}}</div>
+<BsButton class="team-bio-button" onClick={{action "onToggleBio"}}>Read Bio</BsButton>
+<BsCollapse @collapsed={{collapsed}}>
+  <div class="team-bio-description">{{htmlBio}}</div>
+</BsCollapse>

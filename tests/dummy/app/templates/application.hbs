@@ -1,3 +1,7 @@
 <h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+<FT::HomeContent 
+  @title={{homeContentData.title}} 
+  @image={{homeContentData.image}}
+  @body={{homeContentData.body}}
+/>

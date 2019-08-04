@@ -1,0 +1,34 @@
+.contact {
+  background: black;
+
+  h2 {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  &-container-inner {
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+  }
+
+  button {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .contact {
+    &-container-inner {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    &-container-inner {
+      width: 90%;
+    }
+  }
+}

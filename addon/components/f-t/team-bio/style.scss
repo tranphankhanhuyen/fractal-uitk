@@ -1,0 +1,30 @@
+.team-bio {
+  text-align: center;
+  margin: 25px 0;
+  padding: 0 5%;
+
+  &-name {
+    font-weight: 600;
+    padding-top: 10px;
+    font-size: 26px;
+  }
+
+  &-title {
+    font-size: 18px;
+  }
+
+  &-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+  }
+
+  &-button {
+    margin-top: 25px;
+  }
+
+  &-description {
+    text-align: start;
+    padding: 25px 0 0;
+  }
+}

@@ -1,0 +1,33 @@
+.home-content {
+  &-title {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  &-image {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  &-body {
+    margin: 25px auto;
+    width: 60%;
+    max-width: 90%;;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .home-content {
+    &-body {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home-content {
+    &-body {
+      width: 100%;
+    }
+  }
+}

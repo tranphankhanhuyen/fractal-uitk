@@ -1,0 +1,38 @@
+.view-background {
+  position: relative;
+
+  &-caption {
+    position: absolute;
+    color: #000;
+    width: 100%;
+    height: 100%;
+
+    &-inner {
+      position: absolute;
+      border: 2px solid black;
+      background-color: black;
+      width: 50%;
+      padding: 25px;
+      opacity: 0.8;
+      left: 20%;
+      bottom: 10%;
+      margin-left: -17.5%;
+      color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .view-background {
+  
+    &-caption {
+
+      &-inner {
+        width: 80%;
+        margin: auto;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
