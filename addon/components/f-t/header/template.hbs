@@ -1,5 +1,5 @@
 <div class="logo">
-  <img src="/images/fractaltx-logo.png" alt="Fractaltx">
+  <img src={{@logoPath}} alt="Fractaltx">
 
   <BsButton @type="dark" class="menu-icon" onclick={{action "onMenuToggle"}}>
     <img src="/images/icons/menu-light.svg" alt="menu">
@@ -7,7 +7,7 @@
 </div>
 
 <ul class="menu-list" data-show={{menuCollapsed}}>
-  {{#each menus as |menu|}}
+  {{#each @menus as |menu|}}
     <li 
       class="menu-item"
       data-active={{menu.active}}
