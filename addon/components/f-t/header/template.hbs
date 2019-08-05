@@ -29,20 +29,20 @@
           {{#each menu.menus as |subMenu|}}
             <li class="sub-menu-item">
               {{#if subMenu.param}}
-                <ScrollLinkTo
+                <FT::ScrollLinkTo
                   @path={{subMenu.path}}
                   @route={{subMenu.route}}
                   @param={{subMenu.param}}
                 >
                   {{subMenu.name}}
-                </ScrollLinkTo>
+                </FT::ScrollLinkTo>
               {{else}}
-                <ScrollLinkTo
+                <FT::ScrollLinkTo
                   @path={{subMenu.path}}
                   @route={{subMenu.route}}
                 >
                   {{subMenu.name}}
-                </ScrollLinkTo>
+                </FT::ScrollLinkTo>
               {{/if}}
             </li>
           {{/each}}
