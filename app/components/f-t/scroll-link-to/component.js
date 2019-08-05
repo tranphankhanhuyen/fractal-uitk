@@ -1,0 +1,1 @@
+export { default } from 'fractal-uitk/components/f-t/scroll-link-to/component';
