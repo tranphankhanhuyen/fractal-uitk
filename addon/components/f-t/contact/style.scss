@@ -25,6 +25,16 @@
   }
 }
 
+[data-style="absolve"] {
+  .ft-contact {
+    background: white;
+
+    &-container-inner {
+      color: black;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .contact {
     &-container-inner {
