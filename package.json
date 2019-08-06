@@ -28,6 +28,7 @@
     "ember-cli-string-helpers": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.11.0",
