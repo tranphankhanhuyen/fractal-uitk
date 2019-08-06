@@ -6,7 +6,7 @@ import $ from 'jquery';
 
 export default class ViewHeaderComponent extends Component {
   layout = layout;
-  classNames = ['view-header'];
+  classNames = ['ft-header'];
   tagName = 'header';
 
   menus = null;

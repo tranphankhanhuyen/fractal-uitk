@@ -1,8 +1,17 @@
 {{#if @caption}}
-  <div class="view-background-caption">
-    <div class="view-background-caption-inner">
-      <h3>{{@caption.title}}</h3>
-      <p>{{@caption.content}}</p>
+  <div class="ft-background-caption">
+    <div class="ft-background-caption-inner">
+      <div class="ft-background-caption-body">
+        {{#if @caption.image}} 
+          <div class="ft-background-caption-image">
+            <img src={{@caption.image}} alt={{@caption.title}} >
+          </div>
+        {{/if}}
+        <div class="ft-background-caption-content">
+          <h3 class="ft-background-caption-title">{{@caption.title}}</h3>
+          <p class="ft-background-caption-text">{{@caption.content}}</p>
+        </div>
+      </div>
     </div>
   </div>
 {{/if}}

@@ -6,13 +6,25 @@
 
   &-image {
     text-align: center;
-    margin-top: 25px;
+    margin-bottom: 50px;
   }
 
   &-body {
     margin: 25px auto;
     width: 60%;
-    max-width: 90%;;
+    max-width: 90%;
+  }
+}
+
+[data-style="absolve"] {
+  .home-content {
+    &-title {
+      text-align: center;
+      font-size: 32px;
+      color: orange;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
   }
 }
 

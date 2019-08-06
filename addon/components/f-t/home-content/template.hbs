@@ -1,7 +1,8 @@
-<h2 class="home-content-title">{{@title}}</h2>
+
 {{#if @image}}
   <div class="home-content-image">
     <img src={{@image}} alt={{@title}} height="150px" width="150px">
   </div>
 {{/if}}
+<h2 class="home-content-title">{{@title}}</h2>
 <div class="home-content-body">{{html-safe @body}}</div>

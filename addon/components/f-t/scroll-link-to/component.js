@@ -5,12 +5,13 @@ import $ from 'jquery';
 
 export default class ScrollLinkToComponent extends Component {
   layout = layout;
-  @service router;
   tagName = 'a';
   attributeBindings = ['path:href'];
   route = null;
   param = null;
   path = null;
+
+  @service router;
 
   click(event) {
     event.preventDefault();

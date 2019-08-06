@@ -3,7 +3,7 @@ import layout from './template';
 
 export default class ViewFooterComponent extends Component {
   layout = layout;
-  classNames = ['view-footer'];
+  classNames = ['ft-footer'];
   tagName = 'footer';
   logoPath = null;
 }
