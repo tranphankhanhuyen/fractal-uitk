@@ -25,7 +25,8 @@
     "ember-cli-htmlbars": "^3.0.1",
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",
     "ember-cli-sass": "^7.1.2",
-    "ember-cli-string-helpers": "^3.0.0"
+    "ember-cli-string-helpers": "^3.0.0",
+    "ember-fetch": "^6.7.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
