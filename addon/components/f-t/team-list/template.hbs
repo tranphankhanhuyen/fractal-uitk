@@ -1,0 +1,65 @@
+<BsTab @customTabs={{true}} as |Tab|>
+  <div class="tab-title-row-list">
+    <div class="tab-title-row">
+      <BsNav @type="tabs" as |Nav|>
+        <Nav.item>
+          <a class={{concat "nav-link nav-link-label" (if (or (eq Tab.activeId "team-group-pane-0") (eq Tab.activeId "team-group-pane-1")) " active")}}
+            role="tab" {{action Tab.select "team-group-pane-0"}}>
+            Teams
+          </a>
+        </Nav.item>
+        <Nav.item>
+          <a href="#team-group-pane-0"
+            class={{concat "nav-link" (if (bs-eq Tab.activeId "team-group-pane-0") " active")}} role="tab"
+            {{action Tab.select "team-group-pane-0"}}>
+            {{get teamGroups "0.groupName"}}
+          </a>
+        </Nav.item>
+        <Nav.item>
+          <a href="#team-group-pane-1"
+            class={{concat "nav-link" (if (bs-eq Tab.activeId "team-group-pane-1") " active")}} role="tab"
+            {{action Tab.select "team-group-pane-1"}}>
+            {{get teamGroups "1.groupName"}}
+          </a>
+        </Nav.item>
+      </BsNav>
+    </div>
+    <div class="tab-title-row">
+      <BsNav @type="tabs" as |Nav|>
+        <Nav.item>
+          <a class={{concat "nav-link nav-link-label" (if (or (eq Tab.activeId "team-group-pane-2") (eq Tab.activeId "team-group-pane-3")) " active")}}
+            role="tab" {{action Tab.select "team-group-pane-0"}}>
+            Advisors
+          </a>
+        </Nav.item>
+        <Nav.item>
+          <a href="#team-group-pane-2"
+            class={{concat "nav-link" (if (bs-eq Tab.activeId "team-group-pane-2") " active")}} role="tab"
+            {{action Tab.select "team-group-pane-2"}}>
+            {{get teamGroups "2.groupName"}}
+          </a>
+        </Nav.item>
+        <Nav.item>
+          <a href="#team-group-pane-3"
+            class={{concat "nav-link" (if (bs-eq Tab.activeId "team-group-pane-3") " active")}} role="tab"
+            {{action Tab.select "team-group-pane-3"}}>
+            {{get teamGroups "3.groupName"}}
+          </a>
+        </Nav.item>
+      </BsNav>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    {{#each teamGroups as |teamGroup teamGroupIndex|}}
+    <Tab.pane @id={{concat "team-group-pane-" teamGroupIndex}} @title={{teamGroup.groupName}}>
+      <div class="row">
+        {{#each teamGroup.teams as |team|}}
+        <FT::TeamBio class={{concat "col-md-" (div 12 teamGroup.col)}} @name={{team.name}} @title={{team.title}}
+          @bio={{team.bio}} @image={{if team.imageUrl team.imageUrl defaultImageUrl}} />
+        {{/each}}
+      </div>
+    </Tab.pane>
+    {{/each}}
+  </div>
+</BsTab>
