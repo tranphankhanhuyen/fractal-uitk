@@ -1,13 +1,27 @@
-<View::Container>
-  <div class="contact-container-inner" data-anchor={{anchor}}>
-    <h2>Contact Fractal to learn more</h2>
-    <BsForm @model={{contactForm}} @onSubmit={{action "submit"}} as |Form|>
-      <Form.element @controlType="text" @label="Name" @placeholder="Name" @property="contactName" />
-      <Form.element @controlType="email" @label="Email" @placeholder="Email" @property="email" />
-      <Form.element @label="Affiliation" @placeholder="Affiliation" @property="affiliation" />
-      <Form.element @controlType="textarea" @rows="7" @label="Message" @placeholder="Message" @property="message" />
-      <GRecaptcha @size="normal" @sitekey="6LdYjrAUAAAAAGmh9UIGK9ebvZclQSjp8iJpFGoF" @onSuccess={{action "onCaptchaResolved"}} />
-      <BsButton @defaultText="Submit" @type="primary" @buttonType="button" />
-    </BsForm>
-  </div>
-</View::Container>
+<div class="ft-contact-container-inner" data-anchor={{anchor}}>
+  <h2>Contact Us</h2>
+  <BsForm @model={{contactForm}} as |Form|>
+    <Form.element @controlType="text" @label="Name" @placeholder="Name" @property="contactName" />
+    <Form.element @controlType="email" @label="Email" @placeholder="Email" @property="email" />
+    <Form.element @label="Affiliation" @placeholder="Affiliation" @property="affiliation" />
+    <Form.element @controlType="textarea" @rows="7" @label="Message" @placeholder="Message" @property="text" />
+    {{!-- <GRecaptcha @size="normal" @sitekey="6LdYjrAUAAAAAGmh9UIGK9ebvZclQSjp8iJpFGoF" @onSuccess={{action "onCaptchaResolved"}} /> --}}
+    <BsButton @defaultText="Submit" @type="primary" @buttonType="button" @click={{action "submit"}}/>
+  </BsForm>
+</div>
+
+<BsModal @open={{modal.open}} @onHidden={{action (mut modal.open) false}} as |Modal|>
+  <Modal.header>
+    <h4 class="modal-title">
+      Contact Dialog
+    </h4>
+  </Modal.header>
+  <Modal.body>
+    {{modal.message}}
+  </Modal.body>
+  <Modal.footer>
+    {{#unless modal.sending}}
+      <BsButton @onClick={{action (mut modal.open) false}}>Ok</BsButton>
+    {{/unless}}
+  </Modal.footer>
+</BsModal>
