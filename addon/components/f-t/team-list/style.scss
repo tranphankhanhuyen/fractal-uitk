@@ -1,44 +1,87 @@
-.ft-team-list {
-  .nav {
-    &-tabs {
-      border: none;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 25px;
-    }
-
-    &-link {
-      border-radius: 0;
-      border: 3px solid #3c7fa2;
-      color: #3c7fa2;
-      font-size: 1.3em;
-      transition: color 0.15s, background 0.15s, border 0.15s;
-      margin: 0 5px;
-      width: 200px;
-      text-align: center;
-
-      &-label {
-        background: none !important;
-        border: none !important;
-        color: #ccc !important;
-        text-transform: uppercase;
-        font-weight: bold;
-
-        &.active,
-        &:hover {
-          border: none;
-        }
-
-        &.active {
-          color: #3c7fa2 !important;
-        }
+.ember-application {
+  .ft-team-list {
+    .nav {
+      &-tabs {
+        border: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
       }
 
-      &:hover,
-      &.active {
+      &-link {
+        border-radius: 0;
         border: 3px solid #3c7fa2;
-        background: #3c7fa2;
-        color: white;
+        color: #3c7fa2;
+        font-size: 1.3em;
+        transition: color 0.15s, background 0.15s, border 0.15s;
+        margin: 0 5px;
+        width: 200px;
+        text-align: center;
+
+        &-label {
+          background: none !important;
+          border: none !important;
+          color: #ccc !important;
+          text-transform: uppercase;
+          font-weight: bold;
+
+          &.active,
+          &:hover {
+            border: none;
+          }
+
+          &.active {
+            color: #3c7fa2 !important;
+          }
+        }
+
+        &:hover,
+        &.active {
+          border: 3px solid #3c7fa2;
+          background: #3c7fa2;
+          color: white;
+        }
+      }
+    }
+  }
+
+  [data-style="absolve"] {
+    .ft-team-list {
+      .nav {
+        &-link {
+          border-radius: 0;
+          border: 3px solid orange;
+          color: orange;
+          font-size: 1.3em;
+          transition: color 0.15s, background 0.15s, border 0.15s;
+          margin: 0 5px;
+          width: 200px;
+          text-align: center;
+  
+          &-label {
+            background: none !important;
+            border: none !important;
+            color: #ccc !important;
+            text-transform: uppercase;
+            font-weight: bold;
+  
+            &.active,
+            &:hover {
+              border: none;
+            }
+  
+            &.active {
+              color: orange !important;
+            }
+          }
+  
+          &:hover,
+          &.active {
+            border: 3px solid orange;
+            background: orange;
+            color: white;
+          }
+        }
       }
     }
   }
