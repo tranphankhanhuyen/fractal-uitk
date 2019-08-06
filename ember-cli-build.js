@@ -7,12 +7,6 @@ module.exports = function(defaults) {
     // Add options here
     sassOptions: {
       includePaths: ['addon']
-    },
-
-    'ember-bootstrap': {
-      'bootstrapVersion': 4,
-      'importBootstrapFont': false,
-      'importBootstrapCSS': false
     }
   });
 
