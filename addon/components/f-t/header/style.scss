@@ -139,6 +139,21 @@ $blue: #016064;
     }
 
     .menu {
+      &-icon {
+        background-color: rgba(white, .1);
+        border: none !important;
+        box-shadow: none;
+
+        &:hover, &:active {
+          background-color: rgba(white, .05) !important;
+          border: none !important;
+        }
+
+        &:focus {
+          border: none !important;
+        }
+      }
+    
       &-list {
         background-color: $blue;
       }

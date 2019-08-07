@@ -55,9 +55,4 @@ export default class ContactComponent extends Component {
       this.modal.setProperties({ open: modalOpen, message: modalMessage, sending });
     }
   }
-
-  @action
-  onCaptchaResolved(reCaptchaResponse = {}) {
-    this.set('reCaptchaSuccess', reCaptchaResponse.success)
-  }
 }
