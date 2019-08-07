@@ -3,7 +3,7 @@ import fetch from 'fetch';
 
 export default class ContactService extends Service {
   host = 'https://fractal-services.herokuapp.com/v1/mail/send';
-  toEmail = 'uyen.tran@fractaltx.com';
+  toEmail = ['arijit@fractaltx.com', 'uyen.tran@fractaltx.com'];
 
   async sendMessage(contact) {
     try {
