@@ -32,6 +32,26 @@
         width: 150px;
       }
     }
+
+    &-link {
+      color: white;
+      font-size: 18px;
+
+      &::after {
+        display: inline-block;
+        margin-left: 10px;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 10px solid white;
+      }
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
 
@@ -58,6 +78,18 @@ $orange: orange;
 
         p {
           font-size: 26px;
+        }
+      }
+
+      &-link {
+        color: $orange;
+
+        &::after {
+          border-left-color: $orange;
+        }
+
+        &:hover {
+          color: $orange;
         }
       }
     }
