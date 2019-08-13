@@ -9,7 +9,7 @@
         {{/if}}
         <div class="ft-background-caption-content">
           <h3 class="ft-background-caption-title">{{@caption.title}}</h3>
-          <p class="ft-background-caption-text">{{@caption.content}}</p>
+          <p class="ft-background-caption-text">{{html-safe @caption.content}}</p>
           {{#if @caption.link}}
             <a class="ft-background-caption-link" href={{@caption.link.url}}>{{@caption.link.text}}</a>
           {{/if}}
