@@ -1,5 +1,7 @@
 <div class="logo">
-  <img src={{@logoPath}} alt="Fractaltx">
+  <LinkTo @route="application">
+    <img src={{@logoPath}} alt="Fractaltx">
+  </LinkTo>
 
   <BsButton @type="dark" class="menu-icon" onclick={{action "onMenuToggle"}}>
     <img src="/images/icons/menu-light.svg" alt="menu">

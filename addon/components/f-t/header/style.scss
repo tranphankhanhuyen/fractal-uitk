@@ -1,6 +1,6 @@
 $black: #282e34;
 .ft-header {
-  height: 75px;
+  height: 65px;
   width: 100%;
   background-color: $black;
   display: flex;
@@ -11,7 +11,7 @@ $black: #282e34;
 
   .logo {
     height: 100%;
-    padding: 10px 20px;
+    padding: 13px 20px;
     background-color: $black;
     z-index: 1;
 
@@ -29,7 +29,7 @@ $black: #282e34;
       list-style-type: none;
       display: flex;
       align-items: flex-end;
-      background: $black;
+      background-color: $black;
       transition: background-color 0.15s;
     }
 
@@ -52,7 +52,7 @@ $black: #282e34;
       width: 200px;
       font-size: 14px;
       background-color: $black;
-      height: 50px;
+      height: 65px;
       transition: background-color 0.15s, width 0.15s, height 0.25s;
 
       &-dropdown {
@@ -109,7 +109,7 @@ $black: #282e34;
       transition: top 0.25s, opacity 0.25s, visibility 0.25s;
 
       &[data-active] {
-        top: 50px;
+        top: 65px;
         opacity: 1;
         visibility: visible;
       }
@@ -130,6 +130,7 @@ $black: #282e34;
 }
 
 $blue: #016064;
+$light-blue: #0d696e;
 [data-style="absolve"] {
   .ft-header {
     background-color: $blue;
@@ -155,7 +156,7 @@ $blue: #016064;
       }
     
       &-list {
-        background-color: $blue;
+        background-color: $light-blue;
       }
 
       &-item {
@@ -172,7 +173,7 @@ $blue: #016064;
 
     .sub-menu {
       &-list {
-        background-color: $blue;
+        background-color: $light-blue;
       }
     }
   }
@@ -191,22 +192,41 @@ $blue: #016064;
       &-list {
         position: absolute;
         justify-content: flex-end;
-        background: #2e343a;
+        background-color: #2e343a;
         visibility: hidden;
-        top: -75px;
+        top: -65px;
         opacity: 0;
         width: 100%;
         transition: visibility 0.25s, top 0.25s, opacity 0.25s;
 
         &[data-show] {
           visibility: visible;
-          top: 75px;
+          top: 65px;
           opacity: 1;
         }
       }
 
       &-item {
-        background: #2e343a;
+        background-color: #2e343a;
+        height: 50px;
+      }
+    }
+
+    .sub-menu {
+      &-list {
+        &[data-active] {
+          top: 50px;
+        }
+      }
+    }
+  }
+
+  [data-style="absolve"] {
+    .ft-header {  
+      .menu {
+        &-item {
+          background-color: $light-blue;
+        }
       }
     }
   }
@@ -239,7 +259,7 @@ $blue: #016064;
         a {
           justify-content: flex-start;
           padding-left: 50px;
-          height: 50px !important;
+          height: 65px !important;
         }
       }
     }
