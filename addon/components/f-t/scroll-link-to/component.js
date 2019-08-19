@@ -17,11 +17,12 @@ export default class ScrollLinkToComponent extends Component {
     event.preventDefault();
     this.param = this.param || undefined;
     if (this.param) {
+      console.log(this.param);
       this.router.transitionTo(this.route, this.param).then(() => {
         const element = document.querySelector(`[data-anchor="${this.param}"]`);
         if (element instanceof Element) {
           $('html, body').animate({
-            scrollTop: $(element).offset().top - 100
+            scrollTop: $(element).offset().top - 65
           }, 500);
         } else {
           window.scrollTo(0, 0);

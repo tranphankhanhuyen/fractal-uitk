@@ -1,8 +1,13 @@
-
-{{#if @image}}
-  <div class="home-content-image">
-    <img src={{@image}} alt={{@title}}>
+<FT::Container>
+  <div class="home-content">
+    <div class="home-content-inner">
+      {{#if @image}}
+        <div class="home-content-image">
+          <img src={{@image}} alt={{@title}}>
+        </div>
+      {{/if}}
+      <h2 class="home-content-title">{{@title}}</h2>
+      <div class="home-content-body">{{html-safe @body}}</div>
+    </div>
   </div>
-{{/if}}
-<h2 class="home-content-title">{{@title}}</h2>
-<div class="home-content-body">{{html-safe @body}}</div>
+</FT::Container>

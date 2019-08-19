@@ -18,7 +18,13 @@
     >
       {{#if menu.route}}
         {{#if menu.param}}
-          <LinkTo @route={{menu.route}} @model={{menu.param}}>{{menu.name}}</LinkTo>
+          <FT::ScrollLinkTo
+            @path={{menu.path}}
+            @route={{menu.route}}
+            @param={{menu.param}}
+          >
+            {{menu.name}}
+          </FT::ScrollLinkTo>
         {{else}}
           <LinkTo @route={{menu.route}}>{{menu.name}}</LinkTo>
         {{/if}}

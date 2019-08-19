@@ -1,14 +1,18 @@
-<div class="ft-contact-container-inner" data-anchor={{anchor}}>
-  <h2>Contact Us</h2>
-  <BsForm @model={{contactForm}} as |Form|>
-    <Form.element @controlType="text" @label="Name" @placeholder="Name" @property="contactName" />
-    <Form.element @controlType="email" @label="Email" @placeholder="Email" @property="email" />
-    <Form.element @label="Affiliation" @placeholder="Affiliation" @property="affiliation" />
-    <Form.element @controlType="textarea" @rows="7" @label="Message" @placeholder="Message" @property="text" />
-    {{!-- <GRecaptcha @size="normal" @sitekey="6LdYjrAUAAAAAGmh9UIGK9ebvZclQSjp8iJpFGoF" @onSuccess={{action "onCaptchaResolved"}} /> --}}
-    <BsButton @defaultText="Submit" @type="primary" @buttonType="button" @click={{action "submit"}}/>
-  </BsForm>
-</div>
+<FT::Container>
+  <div class="ft-contact-container">
+    <div class="ft-contact-container-inner">
+      <h2>Contact Us</h2>
+      <BsForm @model={{contactForm}} as |Form|>
+        <Form.element @controlType="text" @label="Name" @placeholder="Name" @property="contactName" />
+        <Form.element @controlType="email" @label="Email" @placeholder="Email" @property="email" />
+        <Form.element @label="Affiliation" @placeholder="Affiliation" @property="affiliation" />
+        <Form.element class="ft-contact-message" @controlType="textarea" @rows="7" @label="Message" @placeholder="Message" @property="text" />
+        {{!-- <GRecaptcha @size="normal" @sitekey="6LdYjrAUAAAAAGmh9UIGK9ebvZclQSjp8iJpFGoF" @onSuccess={{action "onCaptchaResolved"}} /> --}}
+        <BsButton @defaultText="Submit" @type="primary" @buttonType="button" @click={{action "submit"}}/>
+      </BsForm>
+    </div>
+  </div>
+</FT::Container>
 
 <BsModal @open={{modal.open}} @onHidden={{action (mut modal.open) false}} as |Modal|>
   <Modal.header>

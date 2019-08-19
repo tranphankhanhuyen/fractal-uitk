@@ -6,6 +6,7 @@ import { inject as service } from '@ember/service';
 export default class ContactComponent extends Component {
   layout = layout;
   classNames = ['ft-contact'];
+  attributeBindings = ['anchor:data-anchor'];
   anchor = 'contact';
   reCaptchaSuccess = false;
   contactForm = EmberObject.create({

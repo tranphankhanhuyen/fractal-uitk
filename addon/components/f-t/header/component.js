@@ -28,20 +28,4 @@ export default class ViewHeaderComponent extends Component {
   onMenuToggle() {
     this.toggleProperty('menuCollapsed');
   }
-
-  @action
-  async onLinkClick(menu, event) {
-    event.preventDefault();
-    // this.router.transitionTo('routes.home').then(() => this.router.transitionTo(menu.route, menu.param));
-    this.router.transitionTo(menu.route, menu.param).then(() => {
-      const element = document.querySelector(`[data-anchor="${menu.param}"]`);
-      if (element instanceof Element) {
-        $('html, body').animate({
-            scrollTop: $(element).offset().top - 100
-        }, 1000);
-      } else {
-        window.scrollTo(0, 0);
-      }
-    });
-  }
 }
