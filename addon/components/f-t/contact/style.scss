@@ -20,8 +20,15 @@
       color: white;
     }
 
-    button {
+    button.btn {
       margin-top: 25px;
+      border-radius: 0;
+      background: rgb(0, 96, 100);
+      border-color: rgb(0, 96, 100);
+    }
+
+    label {
+      font-weight: bold;
     }
   }
 }

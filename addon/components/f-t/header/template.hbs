@@ -17,7 +17,7 @@
       onmouseout={{action "onMenuItemMouseLeave" menu}}
     >
       {{#if menu.route}}
-        {{#if menu.param}}
+        {{!-- {{#if menu.param}} --}}
           <FT::ScrollLinkTo
             @path={{menu.path}}
             @route={{menu.route}}
@@ -25,9 +25,9 @@
           >
             {{menu.name}}
           </FT::ScrollLinkTo>
-        {{else}}
-          <LinkTo @route={{menu.route}}>{{menu.name}}</LinkTo>
-        {{/if}}
+        {{!-- {{else}}
+          <FT::ScrollLinkTo @path={{menu.path}} @route={{menu.route}}>{{menu.name}}</<FT::ScrollLinkTo>
+        {{/if}} --}}
       {{else}}
         <a class="menu-item menu-item-dropdown dropdown-toggle" data-active={{menu.active}}>{{menu.name}}</a>
       {{/if}}
