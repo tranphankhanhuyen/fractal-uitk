@@ -1,8 +1,8 @@
 .ft-contact {
+  background: black;
 
   .ft-container {
     padding: 50px 0;
-    min-height: calc(100vh - 230px);
   }
 
   &-container {
@@ -23,8 +23,6 @@
     button.btn {
       margin-top: 25px;
       border-radius: 0;
-      background: rgb(0, 96, 100);
-      border-color: rgb(0, 96, 100);
     }
 
     label {
@@ -32,10 +30,22 @@
     }
   }
 }
-
+[data-style="fractal"] {
+  .ft-contact {
+    .ft-container {
+      min-height: calc(100vh - 165px);
+    }
+  }
+}
 
 [data-style="absolve"] {
   .ft-contact {
+    background: white;
+
+    .ft-container {
+      min-height: calc(100vh - 230px);
+    }
+
     &-container {
       background: white;
 
@@ -47,6 +57,11 @@
 
       &-inner {
         color: black;
+      }
+
+      button.btn {
+        background: rgb(0, 96, 100);
+        border-color: rgb(0, 96, 100);
       }
     }
   }

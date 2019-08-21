@@ -1,4 +1,7 @@
 .home-content {
+  min-height: calc(100vh - 365px);
+  display: flex;
+  align-items: center;
 
   &-title {
     text-align: center;
@@ -9,6 +12,10 @@
   &-image {
     text-align: center;
     margin-bottom: 25px;
+
+    img {
+      width: 110px;
+    }
   }
 
   &-body {
@@ -17,23 +24,23 @@
   }
 }
 
+[data-style="fractal"] {
+  .ft-home-content {
+    &[data-anchor="working-with-us"] {
+      .ft-container {
+        padding: 50px 0;
+      }
+    }
+  }
+}
+
 [data-style="absolve"] {
   .home-content {
-    min-height: calc(100vh - 365px);
-    display: flex;
-    align-items: center;
-    
     &-title {
       text-align: center;
       font-size: 32px;
       color: rgb(0, 82, 80);
       font-weight: bold;
-    }
-
-    &-image {
-      img {
-        width: 110px;
-      }
     }
   }
 }

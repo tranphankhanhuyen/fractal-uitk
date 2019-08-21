@@ -53,14 +53,19 @@
 
   <div class="tab-content">
     {{#each @teamGroups as |teamGroup teamGroupIndex|}}
-    <Tab.pane @id={{concat "team-group-pane-" teamGroupIndex}} @title={{teamGroup.groupName}}>
-      <div class="row">
-        {{#each teamGroup.teams as |team|}}
-        <FT::TeamBio class={{concat "col-md-" (div 12 teamGroup.col)}} @name={{team.name}} @title={{team.title}}
-          @bio={{team.bio}} @image={{if team.imageUrl team.imageUrl defaultImageUrl}} />
-        {{/each}}
-      </div>
-    </Tab.pane>
+      <Tab.pane @id={{concat "team-group-pane-" teamGroupIndex}} @title={{teamGroup.groupName}}>
+        <div class="row">
+          {{#each teamGroup.teams as |team|}}
+            <FT::TeamBio
+              class={{concat "col-md-" (div 12 teamGroup.col)}}
+              @name={{team.name}}
+              @title={{team.title}}
+              @bio={{team.bio}}
+              @image={{if team.imageUrl team.imageUrl defaultImageUrl}}
+            />
+          {{/each}}
+        </div>
+      </Tab.pane>
     {{/each}}
   </div>
 </BsTab>
