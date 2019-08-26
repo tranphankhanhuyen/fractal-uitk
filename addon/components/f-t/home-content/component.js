@@ -9,5 +9,5 @@ export default class HomeContentComponent extends Component {
   image = null;
   body = null;
   anchor = null;
-  style = null;
+  expandContent = false;
 }
