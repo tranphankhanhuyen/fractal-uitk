@@ -81,7 +81,7 @@
         {{teamGroup.groupName}}
       </button>
       <BsCollapse @collapsed={{teamGroup.collapsed}}>
-        <div class="row">
+        <div>
           {{#each teamGroup.teams as |team|}}
             <FT::TeamBio
               class={{concat "col-md-" (div 12 teamGroup.col)}}

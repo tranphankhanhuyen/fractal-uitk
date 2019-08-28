@@ -36,10 +36,8 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 512px) {
   .team-bio {
-    flex: 0 0 90%;
-    max-width: 90%;
-    margin: 25px auto;
+    max-width: 100%;
   }
 }
