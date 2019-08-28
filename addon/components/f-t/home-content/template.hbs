@@ -14,7 +14,7 @@
         <div  class="home-content-body-full" data-expand={{expandContent}}>
           {{html-safe @body.full}}
         </div>
-        <div class="home-content-body-button" onclick={{action (mut expandContent) (not expandContent)}}>
+        <div class="home-content-body-button" onclick={{action "onExpandContentToggle"}}>
           <FT::ScrollLinkTo
             data-expand={{expandContent}}
             @path={{concat "/" anchor}}

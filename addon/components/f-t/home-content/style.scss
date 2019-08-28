@@ -70,26 +70,39 @@
 }
 
 @media only screen and (max-width: 512px) {
-  .home-content {
-    &-title {
-      font-weight: normal;
-      padding-bottom: 0;
-    }
+  [data-style="absolve"] {
+    .home-content {
+      &-title {
+        font-weight: 600;
+        padding-bottom: 0;
+        font-size: 24px;
+      }
 
-    &-body {
-      &-full {
-        display: none;
+      &-body {
+        p {
+          font-size: 16px;
+        }
 
-        &[data-expand] {
+        &-full {
+          display: none;
+
+          &[data-expand] {
+            display: block;
+          }
+        }
+
+        &-summary {
           display: block;
+
+          &[data-expand] {
+            display: none;
+          }
         }
       }
 
-      &-summary {
-        display: block;
-
-        &[data-expand] {
-          display: none;
+      &-image {
+        img {
+          width: 90px;
         }
       }
     }

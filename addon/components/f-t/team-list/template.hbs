@@ -1,5 +1,5 @@
 <h2>Who we are</h2>
-<BsTab @customTabs={{true}} as |Tab|>
+<BsTab class="ft-team-list-tabs" @customTabs={{true}} as |Tab|>
   <div class="tab-title-row-list">
     <div class="tab-title-row">
       <BsNav @type="tabs" as |Nav|>
@@ -69,3 +69,30 @@
     {{/each}}
   </div>
 </BsTab>
+
+<div class="ft-team-list-collapse">
+  {{#each @teamGroups as |teamGroup teamGroupIndex|}}
+    <div class="ft-team-list-collapse-group">
+      <button
+        class="ft-team-list-group-name"
+        onclick={{action (mut teamGroup.collapsed) (not teamGroup.collapsed)}}
+        data-expand={{not teamGroup.collapsed}}
+      >
+        {{teamGroup.groupName}}
+      </button>
+      <BsCollapse @collapsed={{teamGroup.collapsed}}>
+        <div class="row">
+          {{#each teamGroup.teams as |team|}}
+            <FT::TeamBio
+              class={{concat "col-md-" (div 12 teamGroup.col)}}
+              @name={{team.name}}
+              @title={{team.title}}
+              @bio={{team.bio}}
+              @image={{if team.imageUrl team.imageUrl defaultImageUrl}}
+            />
+          {{/each}}
+        </div>
+      </BsCollapse>
+    </div>
+  {{/each}}
+</div>

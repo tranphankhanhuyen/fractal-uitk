@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import layout from './template';
+import { action } from '@ember/object';
 
 export default class HomeContentComponent extends Component {
   layout = layout;
@@ -10,4 +11,9 @@ export default class HomeContentComponent extends Component {
   body = null;
   anchor = null;
   expandContent = false;
+
+  @action
+  onExpandContentToggle() {
+    this.toggleProperty('expandContent');
+  }
 }

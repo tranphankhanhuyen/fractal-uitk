@@ -15,6 +15,7 @@
       data-active={{menu.active}}
       onmouseover={{action "onMenuItemMouseOver" menu}}
       onmouseout={{action "onMenuItemMouseLeave" menu}}
+      onclick={{action "onMenuItemClick"}}
     >
       {{#if menu.route}}
         {{!-- {{#if menu.param}} --}}
@@ -35,7 +36,7 @@
       {{#if menu.menus}}
         <ul class="sub-menu-list" data-active={{menu.active}}>
           {{#each menu.menus as |subMenu|}}
-            <li class="sub-menu-item">
+            <li class="sub-menu-item" onclick={{action "onMenuItemClick"}}>
               {{#if subMenu.param}}
                 <FT::ScrollLinkTo
                   @path={{subMenu.path}}

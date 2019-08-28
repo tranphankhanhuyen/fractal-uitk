@@ -12,6 +12,8 @@
     h2 {
       text-align: center;
       padding-bottom: 25px;
+      font-size: 32px;
+      font-weight: bold;
     }
 
     &-inner {
@@ -50,9 +52,7 @@
       background: white;
 
       h2 {
-        font-size: 32px;
         color: $headline-color;
-        font-weight: bold;
       }
 
       &-inner {
@@ -86,6 +86,21 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 512px) {
+  .ft-contact {
+    &-container {
+      &-inner {
+        h2 {
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
 
 @media only screen and (max-height: 900px) {
   .ft-contact {

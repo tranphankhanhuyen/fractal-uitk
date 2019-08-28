@@ -17,11 +17,13 @@ export default class ScrollLinkToComponent extends Component {
     event.preventDefault();
     this.param = this.param || undefined;
     const isPageFractal = document.querySelector('[data-style="fractal"]') instanceof Element;
+    const header = document.querySelector('.ft-header');
+    const headerHeight = header.getBoundingClientRect().height;
     if (this.param) {
       this.router.transitionTo(this.route, this.param).then(() => {
         const element = document.querySelector(`[data-anchor="${this.param}"]`);
         if (element instanceof Element) {
-          const paddingTop = (isPageFractal && this.param === "working-with-us") ? 165 : 65;
+          const paddingTop = (isPageFractal && this.param === "working-with-us") ? 100 + headerHeight : headerHeight;
           $('html, body').animate({
             scrollTop: $(element).offset().top - paddingTop
           }, 500);

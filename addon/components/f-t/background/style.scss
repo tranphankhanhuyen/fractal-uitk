@@ -158,29 +158,30 @@ $orange: rgb(255, 192, 0);
       &-caption {
 
         &-inner {
-          padding: 0;
+          padding: 0 15px;
         }
 
         &-body {
           display: block;
 
-          
+
         }
 
         &-content {
           h3 {
-            font-size: 27px;
+            font-size: 24px;
             font-weight: normal;
             padding-bottom: 5vh;
           }
 
           p {
-            font-size: 20px;
+            font-size: 16px;
+            font-weight: normal;
             padding-bottom: 8vh;
           }
 
           a {
-            font-size: 20px;
+            font-size: 16px;
           }
         }
 
@@ -192,6 +193,10 @@ $orange: rgb(255, 192, 0);
             width: 90px;
           }
         }
+      }
+
+      &.home-separator {
+        display: none;
       }
     }
   }
@@ -222,14 +227,5 @@ $orange: rgb(255, 192, 0);
         }
       }
     }
-  }
-}
-
-@media only screen and (max-width: 512px) {
-  [data-style="absolve"] {
-    .ft-background.home-separator {
-      display: none;
-    }
-
   }
 }

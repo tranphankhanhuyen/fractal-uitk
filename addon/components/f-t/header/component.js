@@ -2,7 +2,6 @@ import Component from '@ember/component';
 import layout from './template';
 import { action, set } from '@ember/object';
 import { inject as service } from '@ember/service';
-import $ from 'jquery';
 
 export default class ViewHeaderComponent extends Component {
   layout = layout;
@@ -11,6 +10,7 @@ export default class ViewHeaderComponent extends Component {
 
   menus = null;
   logoPath = null;
+  menuCollapsed = false;
 
   @service router;
 
@@ -22,6 +22,11 @@ export default class ViewHeaderComponent extends Component {
   @action
   onMenuItemMouseLeave(menu) {
     set(menu, 'active', false);
+  }
+
+  @action
+  onMenuItemClick() {
+    this.set('menuCollapsed', false);
   }
 
   @action
