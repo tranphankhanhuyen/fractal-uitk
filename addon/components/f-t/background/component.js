@@ -12,7 +12,7 @@ export default class ViewBackgroundComponent extends Component {
   style = null;
 
   didRender() {
-    this.element.style.background = `url("/images/background/${this.name}") center center / cover no-repeat ${this.fixed ? 'fixed' : ''}`;
-    this.element.style.minHeight = `${this.height}vh`;
+    // this.element.style.background = `url("/images/background/${this.name}") center center / cover no-repeat ${this.fixed ? 'fixed' : ''}`;
+    // this.element.style.minHeight = `${this.height}vh`;
   }
 }
