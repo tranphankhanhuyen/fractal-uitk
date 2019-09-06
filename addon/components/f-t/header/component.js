@@ -14,19 +14,26 @@ export default class ViewHeaderComponent extends Component {
 
   @service router;
 
-  @action
-  onMenuItemMouseOver(menu) {
-    set(menu, 'active', true);
-  }
+  // @action
+  // onMenuItemMouseOver(menu) {
+  //   set(menu, 'active', true);
+  // }
+
+  // @action
+  // onMenuItemMouseLeave(menu) {
+  //   set(menu, 'active', false);
+  // }
 
   @action
-  onMenuItemMouseLeave(menu) {
-    set(menu, 'active', false);
-  }
-
-  @action
-  onMenuItemClick() {
-    this.set('menuCollapsed', false);
+  onMenuItemClick(menu, e) {
+    if (e.target.className.includes('menu-item-dropdown')) {
+      set(menu, 'active', !menu.active)
+    } else {
+      this.set('menuCollapsed', false);
+      for (let menu of this.menus) {
+        set(menu, 'active', false);
+      }
+    }
   }
 
   @action

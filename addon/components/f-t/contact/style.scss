@@ -3,11 +3,13 @@
 
   .ft-container {
     padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &-container {
     background: black;
-
 
     h2 {
       text-align: center;
@@ -32,6 +34,7 @@
     }
   }
 }
+
 [data-style="fractal"] {
   .ft-contact {
     .ft-container {
@@ -45,7 +48,7 @@
     background: white;
 
     .ft-container {
-      min-height: calc(100vh - 230px);
+      min-height: calc(100vh - 225px);
     }
 
     &-container {
@@ -87,24 +90,35 @@
   }
 }
 
-
 @media only screen and (max-width: 512px) {
   .ft-contact {
+    .ft-container.container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      min-height: calc(100vh - 240px);
+    }
+
     &-container {
       &-inner {
+        .form-group {
+          margin-bottom: 5px;
+        }
+
         h2 {
           font-size: 24px;
           font-weight: 600;
+        }
+
+        button.btn {
+          margin-top: 10px;
         }
       }
     }
   }
 }
 
-
 @media only screen and (max-height: 900px) {
   .ft-contact {
-
     .ft-container {
       padding: 25px 0;
       // min-height: calc(100vh - 180px);

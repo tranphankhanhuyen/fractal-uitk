@@ -13,9 +13,10 @@
     <li 
       class="menu-item"
       data-active={{menu.active}}
-      onmouseover={{action "onMenuItemMouseOver" menu}}
-      onmouseout={{action "onMenuItemMouseLeave" menu}}
-      onclick={{action "onMenuItemClick"}}
+      {{!-- onmouseover={{action "onMenuItemMouseOver" menu}}
+      onmouseout={{action "onMenuItemMouseLeave" menu}} --}}
+      data-path={{menu.path}}
+      onclick={{action "onMenuItemClick" menu}}
     >
       {{#if menu.route}}
         {{!-- {{#if menu.param}} --}}

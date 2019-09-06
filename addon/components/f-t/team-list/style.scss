@@ -153,6 +153,40 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .ember-application {
+    [data-style="absolve"] {
+      .page-team {
+        .ft-container.container {
+          padding: 25px 0;
+        }
+      }
+      .ft-team-list {
+        h2 {
+          padding-bottom: 5px;
+        }
+
+        .tab-content {
+          margin-top: 0px;
+        }
+
+        .nav-link-label {
+          font-size: 16px;
+        }
+
+        .nav-link {
+          padding: 2px 0.4rem;
+          margin-bottom: 6px;
+        }
+
+        .tab-title-row-list {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .ember-application {
     [data-style="absolve"] {
@@ -214,11 +248,13 @@
   }
 }
 
+$mobile-orange: rgb(198, 105, 0);
 @media only screen and (max-width: 512px) {
   .ember-application {
     .ft-team-list {
       h2 {
         padding-left: 0;
+        font-weight: 600;
       }
 
       &-tabs {
@@ -237,10 +273,10 @@
         padding: 0;
         border: 0;
         background: none;
-        color: #f0803c;
+        color: $mobile-orange;
         position: relative;
         outline: none;
-        font-size: 24px;
+        font-size: 20px;
 
         &:hover {
           text-decoration: underline;
@@ -257,13 +293,13 @@
           margin: auto;
           border-style: solid;
           border-width: 10px 7px 0 7px;
-          border-color: #f0803c transparent transparent transparent;
+          border-color: $mobile-orange transparent transparent transparent;
           transition: border 0.25s;
         }
 
         &[data-expand]::after {
           border-width: 0 7px 10px 7px;
-          border-color: transparent transparent #f0803c transparent;
+          border-color: transparent transparent $mobile-orange transparent;
         }
       }
     }

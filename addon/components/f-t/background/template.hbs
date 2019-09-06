@@ -10,20 +10,18 @@
             <img src={{@caption.image}} alt={{@caption.title}} >
           </div>
         {{/if}}
-        <div class="ft-background-caption-content">
-          <h3 class="ft-background-caption-title">{{@caption.title}}</h3>
-          <p class="ft-background-caption-text">{{html-safe @caption.content}}</p>
-          {{#if @caption.link}}
-            <FT::ScrollLinkTo
-              class="ft-background-caption-link"
-              @path={{@caption.link.url}}
-              @route={{@caption.link.route}}
-              @param={{@caption.link.param}}
-            >
-              {{@caption.link.text}}
-            </FT::ScrollLinkTo>
-          {{/if}}
-        </div>
+        <h3 class="ft-background-caption-title">{{@caption.title}}</h3>
+        <p class="ft-background-caption-text">{{html-safe @caption.content}}</p>
+        {{#if @caption.link}}
+          <FT::ScrollLinkTo
+            class="ft-background-caption-link"
+            @path={{@caption.link.url}}
+            @route={{@caption.link.route}}
+            @param={{@caption.link.param}}
+          >
+            {{@caption.link.text}}
+          </FT::ScrollLinkTo>
+        {{/if}}
       </div>
     </div>
   </div>

@@ -78,7 +78,7 @@
         onclick={{action (mut teamGroup.collapsed) (not teamGroup.collapsed)}}
         data-expand={{not teamGroup.collapsed}}
       >
-        {{teamGroup.groupName}}
+        {{teamGroup.groupName}} {{if (lt teamGroupIndex 2) "Team" "Avisors"}}
       </button>
       <BsCollapse @collapsed={{teamGroup.collapsed}}>
         <div>
