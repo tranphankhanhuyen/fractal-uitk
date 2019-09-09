@@ -40,4 +40,22 @@ export default class ViewHeaderComponent extends Component {
   onMenuToggle() {
     this.toggleProperty('menuCollapsed');
   }
+
+  init() {
+    super.init(...arguments);
+    document.body.addEventListener('click', (e) => {
+      const { className } = e.target;
+      if (
+        !className.includes('menu-item-dropdown')
+        && !className.includes('menu-icon')
+        && !className.includes('menu-icon-img')
+      ) {
+        for (let menu of this.menus) {
+          set(menu, 'active', false);
+        }
+
+        this.set('menuCollapsed', false);
+      }
+    });
+  }
 }

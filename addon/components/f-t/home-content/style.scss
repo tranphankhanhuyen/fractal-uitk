@@ -59,6 +59,11 @@
     &[data-anchor="approach"] {
       .ft-container {
         padding-top: 65px;
+        padding-bottom: 65px;
+
+        .home-content {
+          min-height: calc(100vh - 65px - 65px * 2);
+        }
       }
     }
 

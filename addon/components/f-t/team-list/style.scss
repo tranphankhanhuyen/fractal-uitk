@@ -187,6 +187,75 @@
   }
 }
 
+@media only screen and (max-height: 800px) {
+  .ember-application {
+    [data-style="absolve"] {
+      .page-team {
+        .ft-container.container {
+          padding: 25px 0;
+        }
+      }
+      .ft-team-list {
+        h2 {
+          padding-bottom: 5px;
+        }
+
+        .tab-content {
+          margin-top: 0px;
+        }
+
+        .nav-link-label {
+          font-size: 16px;
+        }
+
+        .nav-link {
+          padding: 2px 0.4rem;
+          margin-bottom: 6px;
+        }
+
+        .tab-title-row-list {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .ember-application {
+    [data-style="absolve"] {
+      .page-team {
+        .ft-container.container {
+          padding: 15px 0;
+        }
+      }
+      .ft-team-list {
+        h2 {
+          padding-bottom: 5px;
+        }
+
+        .tab-content {
+          margin-top: 0px;
+        }
+
+        .nav-link-label {
+          font-size: 16px;
+        }
+
+        .nav-link {
+          padding: 2px 0.4rem;
+          margin-bottom: 3px;
+          margin-left: 3px;
+        }
+
+        .tab-title-row-list {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .ember-application {
     [data-style="absolve"] {
