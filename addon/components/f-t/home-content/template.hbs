@@ -15,14 +15,16 @@
           {{html-safe @body.full}}
         </div>
         <div class="home-content-body-button" onclick={{action "onExpandContentToggle"}}>
-          <FT::ScrollLinkTo
+          {{!-- <FT::ScrollLinkTo
             data-expand={{expandContent}}
             @path={{concat "/" anchor}}
             @route={{"routes.home-section"}}
             @param={{anchor}}
-          >
+          > --}}
+          <a>
             {{unless expandContent "Read More" "Collapse"}}
-          </FT::ScrollLinkTo>
+          </a>
+          {{!-- </FT::ScrollLinkTo> --}}
         </div>
       </div>
     </div>

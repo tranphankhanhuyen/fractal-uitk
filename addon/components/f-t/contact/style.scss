@@ -70,11 +70,16 @@
   }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px), screen and (max-height: 800px) {
   .ft-contact {
     &-container {
       &-inner {
         width: 80%;
+
+        h2 {
+          font-size: 32px;
+          font-weight: 600;
+        }
       }
     }
   }
@@ -93,8 +98,8 @@
 @media only screen and (max-width: 512px) {
   .ft-contact {
     .ft-container.container {
-      padding-top: 25px;
-      padding-bottom: 25px;
+      padding-top: 0;
+      padding-bottom: 0;
       min-height: calc(100vh - 240px);
     }
 
@@ -110,7 +115,7 @@
         }
 
         button.btn {
-          margin-top: 10px;
+          margin-top: 15px;
         }
       }
     }
@@ -139,15 +144,23 @@
     }
 
     button {
-      margin-top: 5px;
+      margin-top: 7px;
     }
   }
 }
 
 @media only screen and (max-height: 700px) {
   .ft-contact {
+    .ft-container {
+      padding: 10px 0;
+    }
+
     label {
       margin-bottom: 0;
+    }
+
+    button.btn {
+      margin-top: 7px;
     }
   }
 }
