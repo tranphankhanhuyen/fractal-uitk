@@ -27,6 +27,9 @@ export default class ViewHeaderComponent extends Component {
   @action
   onMenuItemClick(menu, e) {
     if (e.target.className.includes('menu-item-dropdown')) {
+      for (let otherMenu of this.menus) {
+        set(otherMenu, 'active', false);
+      }
       set(menu, 'active', !menu.active)
     } else {
       this.set('menuCollapsed', false);

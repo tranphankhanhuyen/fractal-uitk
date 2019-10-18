@@ -1,18 +1,29 @@
-<div class="row">
-  <div class="col-md-12">
-    <h2 class="home-columns-headline">{{html-safe @headline}}</h2>
-  </div>
-  <div class="col-md-12">
-    <p class="home-columns-subheadline">{{@subHeadline}}</p>
-  </div>
-</div>
-
-<div class="row home-columns-content-list">
-  {{#each @columns as |column|}}
-    <div class="home-columns-content col-md-4 col-centered">
-      <img class="home-columns-content-img col-img img-responsive" src={{column.image.src}} alt="">
-      <h3 class="home-columns-content-title">{{column.title}}</h3>
-      <div class="home-columns-content-body">{{html-safe column.content}}</div>
+<FT::Container>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="home-columns-headline">{{html-safe @headline}}</h2>
     </div>
-  {{/each}}
-</div>
+    <div class="col-md-12">
+      <p class="home-columns-subheadline">{{@subHeadline}}</p>
+    </div>
+  </div>
+
+  <div class="row home-columns-content-list">
+    {{#each @columns as |column|}}
+      <div class="home-columns-content col-md-4 col-centered">
+        <img class="home-columns-content-img col-img img-responsive" src={{column.image.src}} alt="">
+        <h3 class="home-columns-content-title" data-desktop="true">{{column.title}}</h3>
+        <h3 
+          class="home-columns-content-title" 
+          data-mobile="true"
+          data-expand={{column.expandContent}}
+          onclick={{action "onExpandContentToggle" column}}
+        >
+          {{column.title}}
+        </h3>
+        <div class="home-columns-content-body" data-desktop="true">{{html-safe column.content}}</div>
+        <div class="home-columns-content-body" data-mobile="true" data-expand={{column.expandContent}}>{{html-safe column.content}}</div>
+      </div>
+    {{/each}}
+  </div>
+</FT::Container>

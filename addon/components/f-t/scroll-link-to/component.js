@@ -23,9 +23,10 @@ export default class ScrollLinkToComponent extends Component {
       this.router.transitionTo(this.route, this.param).then(() => {
         const element = document.querySelector(`[data-anchor="${this.param}"]`);
         if (element instanceof Element) {
-          const paddingTop = (isPageFractal && this.param === "working-with-us") ? 100 + headerHeight : headerHeight;
+          const isMobile = document.body.offsetWidth <= 540;
+          const paddingTop = (isPageFractal && this.param === "working-with-us" && !isMobile) ? 100 + headerHeight : headerHeight;
           $('html, body').animate({
-            scrollTop: $(element).offset().top - paddingTop
+            scrollTop: Math.round($(element).offset().top) - paddingTop
           }, 500);
         } else {
           window.scrollTo(0, 0);

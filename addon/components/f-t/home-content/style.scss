@@ -28,6 +28,7 @@
       margin: 25px auto;
       margin-bottom: 0;
       font-size: 18px;
+      text-align: left;
 
       &-summary {
         display: none;
@@ -50,6 +51,10 @@
       .ft-container {
         padding: 50px 0;
       }
+
+      .home-content {
+        min-height: calc(100vh - 65px - 50px * 2 - 100px * 2);
+      }
     }
   }
 }
@@ -68,126 +73,118 @@
 }
 
 @media only screen and (min-width: 1025px) {
-  [data-style="absolve"] {
-    .ft-home-content {
-      .home-content {
-        &-body {
-          width: 95%;
-        }
+  .ft-home-content {
+    .home-content {
+      &-body {
+        width: 95%;
       }
     }
   }
 }
 
 @media only screen and (max-width: 1024px), screen and (max-height: 800px) {
-  [data-style="absolve"] {
-    .ft-home-content {
-      .home-content {
-        &-body {
-          width: 95%;
-          font-size: 16px;
-        }
+  .ft-home-content {
+    .home-content {
+      &-body {
+        width: 95%;
+        font-size: 16px;
+      }
 
-        &-title {
-          font-size: 32px;
-          font-weight: 600;
-        }
+      &-title {
+        font-size: 32px;
+        font-weight: 600;
       }
     }
   }
 }
 
 @media only screen and (max-width: 768px) {
-  [data-style="absolve"] {
-    .ft-home-content {
-      .home-content {
-        &-body {
-          width: 100%;
-        }
+  .ft-home-content {
+    .home-content {
+      &-body {
+        width: 100%;
       }
     }
   }
 }
 
 @media only screen and (max-width: 512px) {
-  [data-style="absolve"] {
-    .ft-home-content {
-      .ft-container {
-        padding-top: 25px;
-        padding-bottom: 25px;
+  .ft-home-content {
+    .ft-container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .home-content {
+      min-height: calc(100vh - 130px);
+
+      &-title {
+        font-weight: 600;
+        padding-bottom: 0;
+        font-size: 24px;
       }
 
-      .home-content {
-        min-height: calc(100vh - 130px);
-
-        &-title {
-          font-weight: 600;
-          padding-bottom: 0;
-          font-size: 24px;
+      &-body {
+        p {
+          font-size: 16px;
         }
 
-        &-body {
-          p {
-            font-size: 16px;
-          }
+        &-full {
+          display: none;
 
-          &-full {
-            display: none;
-
-            &[data-expand] {
-              display: block;
-            }
-          }
-
-          &-summary {
+          &[data-expand] {
             display: block;
-
-            &[data-expand] {
-              display: none;
-            }
           }
         }
 
-        &-image {
-          img {
-            width: 90px;
-          }
-        }
-
-        &-body-button {
+        &-summary {
           display: block;
-          text-align: center;
-          margin-right: 28px;
-          margin-top: 15px;
 
-          a {
-            position: relative;
+          &[data-expand] {
+            display: none;
+          }
+        }
+      }
+
+      &-image {
+        img {
+          width: 90px;
+        }
+      }
+
+      &-body-button {
+        display: block;
+        text-align: center;
+        margin-right: 28px;
+        margin-top: 15px;
+
+        a {
+          position: relative;
+          color: #f0803c;
+          text-transform: uppercase;
+
+          &:hover {
             color: #f0803c;
-            text-transform: uppercase;
+          }
 
-            &:hover {
-              color: #f0803c;
-            }
+          &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            margin-left: 5px;
+            border-style: solid;
+            border-width: 10px 7px 0 7px;
+            border-color: #f0803c transparent transparent transparent;
+            transition: border 0.25s;
+          }
 
-            &::after {
-              content: "";
-              width: 0;
-              height: 0;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              margin: auto;
-              margin-left: 5px;
-              border-style: solid;
-              border-width: 10px 7px 0 7px;
-              border-color: #f0803c transparent transparent transparent;
-              transition: border 0.25s;
-            }
-
-            &[data-expand]::after {
-              border-width: 0 7px 10px 7px;
-              border-color: transparent transparent #f0803c transparent;
-            }
+          &[data-expand]::after {
+            border-width: 0 7px 10px 7px;
+            border-color: transparent transparent #f0803c transparent;
           }
         }
       }

@@ -153,35 +153,33 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px), screen and (max-height: 1000px) {
   .ember-application {
-    [data-style="absolve"] {
-      .page-team {
-        .ft-container.container {
-          padding: 25px 0;
-        }
+    .page-team {
+      .ft-container.container {
+        padding: 25px 0;
       }
-      .ft-team-list {
-        h2 {
-          padding-bottom: 5px;
-        }
+    }
+    .ft-team-list {
+      h2 {
+        padding-bottom: 5px;
+      }
 
-        .tab-content {
-          margin-top: 0px;
-        }
+      .tab-content {
+        margin-top: 0px;
+      }
 
-        .nav-link-label {
-          font-size: 16px;
-        }
+      .nav-link-label {
+        font-size: 16px;
+      }
 
-        .nav-link {
-          padding: 2px 0.4rem;
-          margin-bottom: 6px;
-        }
+      .nav-link {
+        padding: 2px 0.4rem;
+        margin-bottom: 6px;
+      }
 
-        .tab-title-row-list {
-          margin-bottom: 20px;
-        }
+      .tab-title-row-list {
+        margin-bottom: 20px;
       }
     }
   }
@@ -189,33 +187,31 @@
 
 @media only screen and (max-height: 800px) {
   .ember-application {
-    [data-style="absolve"] {
-      .page-team {
-        .ft-container.container {
-          padding: 25px 0;
-        }
+    .page-team {
+      .ft-container.container {
+        padding: 25px 0;
       }
-      .ft-team-list {
-        h2 {
-          padding-bottom: 5px;
-        }
+    }
+    .ft-team-list {
+      h2 {
+        padding-bottom: 5px;
+      }
 
-        .tab-content {
-          margin-top: 0px;
-        }
+      .tab-content {
+        margin-top: 0px;
+      }
 
-        .nav-link-label {
-          font-size: 16px;
-        }
+      .nav-link-label {
+        font-size: 16px;
+      }
 
-        .nav-link {
-          padding: 2px 0.4rem;
-          margin-bottom: 6px;
-        }
+      .nav-link {
+        padding: 2px 0.4rem;
+        margin-bottom: 6px;
+      }
 
-        .tab-title-row-list {
-          margin-bottom: 20px;
-        }
+      .tab-title-row-list {
+        margin-bottom: 20px;
       }
     }
   }
@@ -223,34 +219,32 @@
 
 @media only screen and (max-height: 750px) {
   .ember-application {
-    [data-style="absolve"] {
-      .page-team {
-        .ft-container.container {
-          padding: 15px 0;
-        }
+    .page-team {
+      .ft-container.container {
+        padding: 15px 0;
       }
-      .ft-team-list {
-        h2 {
-          padding-bottom: 5px;
-        }
+    }
+    .ft-team-list {
+      h2 {
+        padding-bottom: 5px;
+      }
 
-        .tab-content {
-          margin-top: 0px;
-        }
+      .tab-content {
+        margin-top: 0px;
+      }
 
-        .nav-link-label {
-          font-size: 16px;
-        }
+      .nav-link-label {
+        font-size: 16px;
+      }
 
-        .nav-link {
-          padding: 2px 0.4rem;
-          margin-bottom: 3px;
-          margin-left: 3px;
-        }
+      .nav-link {
+        padding: 2px 0.4rem;
+        margin-bottom: 3px;
+        margin-left: 3px;
+      }
 
-        .tab-title-row-list {
-          margin-bottom: 20px;
-        }
+      .tab-title-row-list {
+        margin-bottom: 20px;
       }
     }
   }
@@ -258,27 +252,25 @@
 
 @media only screen and (max-width: 991px) {
   .ember-application {
-    [data-style="absolve"] {
-      .ft-team-list {
-        #team-group-pane-2 {
-          .team-bio:nth-child(2) {
-            .team-bio-title {
-              min-height: 66px;
-            }
-          }
-
-          .team-bio:nth-child(3) {
-            .team-bio-title {
-              min-height: 40px;
-            }
+    .ft-team-list {
+      #team-group-pane-2 {
+        .team-bio:nth-child(2) {
+          .team-bio-title {
+            min-height: 66px;
           }
         }
 
-        #team-group-pane-3 {
-          .team-bio:nth-child(4) {
-            .team-bio-title {
-              min-height: 66px;
-            }
+        .team-bio:nth-child(3) {
+          .team-bio-title {
+            min-height: 40px;
+          }
+        }
+      }
+
+      #team-group-pane-3 {
+        .team-bio:nth-child(4) {
+          .team-bio-title {
+            min-height: 66px;
           }
         }
       }
@@ -288,28 +280,26 @@
 
 @media only screen and (max-width: 767px) {
   .ember-application {
-    [data-style="absolve"] {
-      .ft-team-list {
-        #team-group-pane-2 {
-          .team-bio:nth-child(2) {
-            .team-bio-title {
-              min-height: initial;
-            }
-          }
-
-          .team-bio:nth-child(3) {
-            .team-bio-title {
-              min-height: initial;
-            }
+    .ft-team-list {
+      #team-group-pane-2 {
+        .team-bio:nth-child(2) {
+          .team-bio-title {
+            min-height: initial;
           }
         }
 
-        #team-group-pane-3 {
-          .team-bio:nth-child(3),
-          .team-bio:nth-child(4) {
-            .team-bio-title {
-              min-height: initial;
-            }
+        .team-bio:nth-child(3) {
+          .team-bio-title {
+            min-height: initial;
+          }
+        }
+      }
+
+      #team-group-pane-3 {
+        .team-bio:nth-child(3),
+        .team-bio:nth-child(4) {
+          .team-bio-title {
+            min-height: initial;
           }
         }
       }

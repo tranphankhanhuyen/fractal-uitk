@@ -131,7 +131,7 @@ $orange: rgb(255, 192, 0);
           bottom: 0;
           top: 0;
         }
-  
+
         &-body {
           height: 100%;
           justify-content: center;
@@ -150,7 +150,6 @@ $orange: rgb(255, 192, 0);
         }
 
         &-link {
-
         }
       }
     }
@@ -220,6 +219,16 @@ $orange: rgb(255, 192, 0);
 }
 
 @media only screen and (max-width: 512px) {
+  .ft-background.home-separator {
+    display: none;
+  }
+
+  .ft-background-caption-body {
+    p {
+      font-size: 16px !important;
+    }
+  }
+
   [data-style="absolve"] {
     .ft-background {
       &-caption {
@@ -255,10 +264,6 @@ $orange: rgb(255, 192, 0);
         img {
           width: 90px;
         }
-      }
-
-      &.home-separator {
-        display: none;
       }
     }
   }
