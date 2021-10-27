@@ -1,6 +1,6 @@
 {
   "name": "fractal-uitk",
-  "version": "v0.0.19",
+  "version": "v0.0.20",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
