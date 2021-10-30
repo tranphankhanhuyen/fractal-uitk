@@ -7,7 +7,11 @@
         <Form.element @controlType="email" @label="Email" @placeholder="Email" @property="email" />
         <Form.element @label="Affiliation" @placeholder="Affiliation" @property="affiliation" />
         <Form.element class="ft-contact-message" @controlType="textarea" @rows="7" @label="Message" @placeholder="Message" @property="text" />
-        {{!-- <GRecaptcha @size="normal" @sitekey="6LdYjrAUAAAAAGmh9UIGK9ebvZclQSjp8iJpFGoF" @onSuccess={{action "onCaptchaResolved"}} /> --}}
+        <GRecaptcha
+          @size="normal"
+          @onSuccess={{action "onCaptchaResolved"}}
+          @onExpired={{action "onCaptchaExpired"}}
+        />
         <BsButton @defaultText="Submit" @type="primary" @buttonType="button" @click={{action "submit"}}/>
       </BsForm>
     </div>
