@@ -9,6 +9,7 @@ export default class ContactComponent extends Component {
   attributeBindings = ['anchor:data-anchor'];
   anchor = 'contact';
   reCaptchaSuccess = false;
+  isHuman = false;
   contactForm = EmberObject.create({
     contactName: null,
     email: null,
@@ -24,6 +25,16 @@ export default class ContactComponent extends Component {
   @service contact;
 
   @action
+  onCaptchaExpired() {
+    this.set('isHuman', false);
+  }
+
+  @action
+  onCaptchaResolved(response) {
+    this.set('isHuman', Boolean(response));
+  }
+
+  @action
   async submit() {
     const contactName = this.get('contactForm.contactName');
     const email = this.get('contactForm.email');
@@ -37,6 +48,8 @@ export default class ContactComponent extends Component {
       modalMessage = 'Please enter your contact email';
     } else if (!text) {
       modalMessage = 'Please enter your contact message';
+    } else if (!this.isHuman) {
+      modalMessage = 'Please verify your captcha';
     } else {
       sending = true;
       modalMessage = 'Sending contact message...'
@@ -52,7 +65,7 @@ export default class ContactComponent extends Component {
       } else {
         modalMessage = 'Not able to send message to Fractal.'
       }
-  
+
       this.modal.setProperties({ open: modalOpen, message: modalMessage, sending });
     }
   }
